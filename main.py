@@ -41,7 +41,7 @@ def convert(message: telebot.types.Message):
     else:
         quote, base, amount = values
         total_base = CurrencyExchange.convert(quote, base, amount)
-        text = f'Цена {amount} {quote} в {base} - {total_base}'
+        text = f'Цена {amount} {base} в {quote} - {total_base}'
         bot.send_message(message.chat.id, text)
 
 bot.polling()
